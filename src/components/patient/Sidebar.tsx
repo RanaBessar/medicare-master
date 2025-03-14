@@ -108,7 +108,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isExpanded, toggleSidebar }) => {
 
                         return (
                             <Link href={item.path} key={item.name} passHref style={{ textDecoration: 'none', color: 'inherit' }}>
-                                <ListItem disablePadding sx={{ mb: -0.3 }}>
+                                <ListItem disablePadding sx={{ mb: 1 }}>
                                     <ListItemButton
                                         sx={{
                                             minHeight: 48,
@@ -219,11 +219,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isExpanded, toggleSidebar }) => {
                 <Box sx={{ mt: 'auto', px: 2 }}>
                     <List>
                         <ListItem disablePadding sx={{ mb: -2}}>
-                            <Link href="/add" passHref style={{ textDecoration: 'none', color: 'inherit',marginTop:-20 }}>
+                            <Link href="/add" passHref style={{ textDecoration: 'none', color: 'inherit', }}>
                                 <ListItemButton
                                     sx={{
                                         minHeight: 48,
-                                        px: 2,
+                                        px: 1.6,
                                         py: 1,
                                         borderRadius: '8px',
                                         '&:hover': {
@@ -265,12 +265,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isExpanded, toggleSidebar }) => {
                                 </ListItemButton>
                             </Link>
                         </ListItem>
-                        <ListItem disablePadding sx={{ mb: 5 }}>
+                        <ListItem disablePadding sx={{ mb: 1 }}>
                             <Link href="/dark" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <ListItemButton
                                     sx={{
                                         minHeight: 48,
-                                        px: 2,
+                                        px: 1.6,
                                         py: 1,
                                         borderRadius: '8px',
                                         '&:hover': {

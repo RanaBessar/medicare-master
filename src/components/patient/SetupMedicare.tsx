@@ -60,41 +60,10 @@ const SetupMedicare: React.FC = () => {
                 marginTop:-1.8,
             }}
         >
-            <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 500, display: 'none' }}>
+            <Typography variant="h6" component="h2" sx={{ mb: 2, fontWeight: 500, display: 'none' , color:'#7F7F7F' }}>
                 Set Up Medicare
             </Typography>
 
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
-                <Stepper
-                    alternativeLabel
-                    activeStep={activeStep}
-                    connector={<CustomConnector />}
-                    sx={{
-                        width: '100%',
-                        '.MuiStepLabel-label': {
-                            typography: 'body2',
-                            mt: 1,
-                            fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                        },
-                    }}
-                >
-                    {steps.map((label, index) => (
-                        <Step key={label}>
-                            <StepLabel
-                                StepIconComponent={(props) => (
-                                    <CustomStepIcon
-                                        ownerState={{ active: props.active, completed: props.completed }}
-                                    >
-                                        {props.icon}
-                                    </CustomStepIcon>
-                                )}
-                            >
-                                {label}
-                            </StepLabel>
-                        </Step>
-                    ))}
-                </Stepper>
-            </Box>
 
             {/* Current step content */}
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mt: 3 }}>
