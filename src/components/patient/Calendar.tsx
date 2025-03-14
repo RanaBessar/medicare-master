@@ -23,17 +23,20 @@ const Calendar: React.FC = () => {
                     <Typography
                         variant="h6"
                         sx={{
+                            fontFamily:'poppins',
+                            color:'#000000',
                             fontWeight: 600,
                             fontSize: '1.25rem',
-                            mb: 0.5,
-                            borderBottom: '2px solid #21647D',
+                            borderBottom: '3px solid #217C99',
+                            borderRadius:'   5px',
                             display: 'inline-block',
                             pb: 0.5,
+                            marginLeft:'125px'
                         }}
                     >
                         Calendar
                     </Typography>
-                    <Typography sx={{ display: 'flex', alignItems: 'center', color: '#6C7A89', fontSize: '0.875rem' }}>
+                    <Typography sx={{ display: 'flex', alignItems: 'center', color: '#0E0E0F', fontSize: '0.875rem' }}>
                         <IconButton
                             size="small"
                             onClick={prevMonth}
@@ -68,10 +71,8 @@ const Calendar: React.FC = () => {
                     </Typography>
                 </Box>
                 <Box sx={{ textAlign: 'right' }}>
-                    <Typography variant="subtitle1" sx={{ fontWeight: 600, fontSize: '1rem', mb: 0.5, color: '#555' }}>
-                        Date
-                    </Typography>
-                    <Typography sx={{ color: '#6C7A89', fontSize: '0.875rem' }}>
+                 
+                    <Typography sx={{ color: '#0E0E0F', fontSize: '0.875rem', marginTop:'45px' }}>
                         {format(selectedDate, "dd.'June' yyyy")}
                     </Typography>
                 </Box>
@@ -90,8 +91,8 @@ const Calendar: React.FC = () => {
                             <Typography
                                 variant="caption"
                                 sx={{
-                                    fontWeight: 500,
-                                    color: '#6C7A89',
+                                    fontWeight: 550,
+                                    color: '#797B86',
                                     fontSize: '0.7rem',
                                 }}
                             >
@@ -123,19 +124,19 @@ const Calendar: React.FC = () => {
                     <Grid item xs key={`cell-${i}-${j}`}>
                         <Box
                             sx={{
-                                height: 25,
+                                height: 35,
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 cursor: date ? 'pointer' : 'default',
                                 borderRadius: '4px',
-                                backgroundColor: date && isSameDay(date, selectedDate) ? '#EB445A' : 'transparent',
+                                backgroundColor: date && isSameDay(date, selectedDate) ? '#ED1C5D' : 'transparent',
                                 color: date
                                     ? isSameDay(date, selectedDate)
                                         ? 'white'
                                         : isToday(date)
                                             ? '#21647D'
-                                            : '#555'
+                                            : '#45454A'
                                     : 'transparent',
                                 '&:hover': {
                                     backgroundColor: date && !isSameDay(date, selectedDate) ? 'rgba(33, 100, 125, 0.08)' : undefined,
@@ -146,8 +147,8 @@ const Calendar: React.FC = () => {
                             <Typography
                                 variant="body2"
                                 sx={{
-                                    fontWeight: date && (isToday(date) || isSameDay(date, selectedDate)) ? 600 : 400,
-                                    fontSize: '0.8rem',
+                                    fontWeight: date && (isToday(date) || isSameDay(date, selectedDate)) ? 600 : 500,
+                                    fontSize: '10px',
                                 }}
                             >
                                 {date ? date.getDate() : ''}
@@ -171,14 +172,18 @@ const Calendar: React.FC = () => {
     };
 
     return (
-        <Box sx={{ mb: 4 }}>
+        <Box sx={{ mb: 1 }}>
             {renderHeader()}
             <Paper
                 elevation={0}
                 sx={{
                     p: 2,
                     borderRadius: '15px',
-                    border: '1px solid #EEF1F4',
+                    background: 'transparent',
+                    border: 'none',
+                    boxShadow:'none',
+                    marginTop:-5,
+                    width:'360px'
                 }}
             >
                 {renderDays()}

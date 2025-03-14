@@ -39,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isExpanded, toggleSidebar }) => {
             sx={{
                 width: drawerWidth,
                 flexShrink: 0,
-                zIndex: 1000,
+                
                 '& .MuiDrawer-paper': {
                     width: drawerWidth,
                     boxSizing: 'border-box',
@@ -47,7 +47,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isExpanded, toggleSidebar }) => {
                     transition: 'width 0.2s ease-in-out',
                     overflow: 'hidden', // Prevent scrolling
                     backgroundColor: 'white',
-                    zIndex: 1000,
+    
                     pt: '15px', // Add padding top to account for AppBar height
                     mt: '70px',
                     borderRadius: '10px',
@@ -90,7 +90,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isExpanded, toggleSidebar }) => {
                             transform: isExpanded ? 'rotate(0deg)' : 'rotate(180deg)',
                             transition: 'transform 0.2s ease-in-out',
                             boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-                            zIndex:-1,
+                            
                            
 
                         }}
@@ -218,7 +218,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isExpanded, toggleSidebar }) => {
                 {/* Additional Links at the bottom */}
                 <Box sx={{ mt: 'auto', px: 2 }}>
                     <List>
-                        <ListItem disablePadding sx={{ mb: -2}}>
+                        <ListItem disablePadding sx={{ mb: 0.2}}>
                             <Link href="/add" passHref style={{ textDecoration: 'none', color: 'inherit', }}>
                                 <ListItemButton
                                     sx={{

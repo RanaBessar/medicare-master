@@ -23,10 +23,10 @@ const Dashboard = () => {
                         width: '8px',
                     },
                     '&::-webkit-scrollbar-track': {
-                        background: '#f1f1f1',
+                        background: '#ffffff',
                     },
                     '&::-webkit-scrollbar-thumb': {
-                        background: '#21647D',
+                        background: '#ffffff',
                         borderRadius: '4px',
                     },
                 }}
@@ -37,7 +37,7 @@ const Dashboard = () => {
                         <Typography variant="h4" component="h1" sx={{ fontWeight: 600, mb: 1, color: '#454747' }}>
                             Welcome Noah !
                         </Typography>
-                        <Typography variant="body2"  fontSize={20} sx={{  color: '#A3A0A0', fontFamily:"inter", marginTop:-1 }} >
+                        <Typography variant="body2"  fontSize={16} sx={{  color: '#A3A0A0', fontFamily:"poppins", marginTop:-1 , fontWeight:300 }} >
                             Send Doctors, schools and loved ones secure access to important records
                         </Typography>
                     </Box>
@@ -63,6 +63,7 @@ const Dashboard = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     overflowY: 'hidden',
+                    overflowX:'hidden'
                 }}
             >
                 {/* Calendar */}

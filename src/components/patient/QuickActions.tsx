@@ -90,12 +90,17 @@ const QuickActions: React.FC = () => {
             <Typography
                 variant="h6"
                 sx={{
+                    fontFamily:'poppins',
+                    color:'#000000',
                     fontWeight: 600,
                     fontSize: '1.25rem',
                     mb: 2,
-                    borderBottom: '2px solid #21647D',
+                    borderBottom: '3px solid #217C99',
+                    borderRadius:'   5px',
                     display: 'inline-block',
                     pb: 0.5,
+                    marginLeft:'120px',
+                 
                 }}
             >
                 Quick Actions
