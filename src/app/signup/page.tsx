@@ -122,10 +122,12 @@ const SignUpTitle = styled(Typography)({
         marginTop: '40px',
     },
     '@media (max-width: 900px)': {
-        fontSize: '20px',
+        fontSize: '30px',
         lineHeight: '30px',
         marginTop: '70px',
     },
+ 
+     
 });
 
 const SignUpSubtitle = styled(Typography)({

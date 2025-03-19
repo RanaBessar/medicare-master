@@ -131,6 +131,7 @@
     z-index: 2;
     box-shadow: 0px 64px 26px rgba(0, 0, 0, 0.01), 0px 36px 22px rgba(0, 0, 0, 0.05), 0px 16px 16px rgba(0, 0, 0, 0.09), 0px 4px 9px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    
 }
 
 .get-started-btn:hover {

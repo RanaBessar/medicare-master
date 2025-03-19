@@ -69,7 +69,49 @@ const SubmitButton = styled(Button)({
         fontSize: '14px',
         lineHeight: '26px',
         marginTop: '10px',
-       
+    },
+});
+
+const LoginPrompt = styled(Typography)({
+    fontFamily: '"Montserrat", sans-serif',
+    fontStyle: 'normal',
+    fontWeight: 500,
+    fontSize: '14px',
+    lineHeight: '20px',
+    color: '#EFFAFC',
+    marginBottom: '16px',
+    textAlign: 'center',
+    width: '100%',
+    '@media (max-width: 1400px)': {
+        fontSize: '14px',
+        lineHeight: '18px',
+    },
+    '@media (max-width: 1200px)': {
+        fontSize: '16px',
+        lineHeight: '17px',
+        marginBottom: '14px',
+    },
+    '@media (max-width: 900px)': {
+        fontSize: '16px',
+        lineHeight: '16px',
+        marginBottom: '12px',
+    },
+    '@media (max-width: 600px)': {
+        fontSize: '16px',
+        lineHeight: '15px',
+        marginBottom: '10px',
+    },
+});
+
+const LoginLink = styled('span')({
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    color: '#EFFAFC',
+    '&:hover': {
+        textDecoration: 'underline',
+    },
+    '@media (max-width: 600px)': {
+        fontSize: '16px'
     },
 });
 
@@ -224,6 +266,11 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onLoginClick }) => {
                     >
                         Sign Up
                     </SubmitButton>
+
+                    <LoginPrompt>
+                        Already have an account?{' '}
+                        <LoginLink onClick={onLoginClick}>Log In</LoginLink>
+                    </LoginPrompt>
 
                 </StyledForm>
             )}

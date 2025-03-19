@@ -46,6 +46,12 @@ const PrimaryButton = styled(Button)({
         fontSize: '20px',
         lineHeight: '30px',
     },
+    '@media (max-width: 600px)': {
+        width: '180px',
+        height: '50px',
+        fontSize: '15px',
+        lineHeight: '30px',
+    },
 });
 
 const SecondaryButton = styled(Button)({
@@ -83,6 +89,12 @@ const SecondaryButton = styled(Button)({
         width: '260px',
         height: '60px',
         fontSize: '20px',
+        lineHeight: '30px',
+    },
+    '@media (max-width: 600px)': {
+        width: '180px',
+        height: '50px',
+        fontSize: '15px',
         lineHeight: '30px',
     },
 });
