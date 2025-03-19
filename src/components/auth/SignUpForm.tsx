@@ -64,39 +64,12 @@ const SubmitButton = styled(Button)({
         lineHeight: '32px',
     },
     '@media (max-width: 900px)': {
-        width: '220px',
-        height: '50px',
-        fontSize: '16px',
-        lineHeight: '26px',
-        marginTop: '20px',
-        marginBottom: '16px',
-    },
-});
-
-const LoginPrompt = styled(Typography)({
-    fontFamily: '"Montserrat", sans-serif',
-    fontStyle: 'normal',
-    fontWeight: 500,
-    fontSize: '14px',
-    lineHeight: '20px',
-    color: '#EFFAFC',
-    marginBottom: '16px',
-    '@media (max-width: 1400px)': {
+        width: '160px',
+        height: '20px',
         fontSize: '14px',
-        lineHeight: '18px',
-    },
-    '@media (max-width: 900px)': {
-        fontSize: '13px',
-        lineHeight: '16px',
-    },
-});
-
-const LoginLink = styled('span')({
-    fontWeight: 'bold',
-    cursor: 'pointer',
-    color: '#EFFAFC',
-    '&:hover': {
-        textDecoration: 'underline',
+        lineHeight: '26px',
+        marginTop: '10px',
+       
     },
 });
 
@@ -252,10 +225,6 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onLoginClick }) => {
                         Sign Up
                     </SubmitButton>
 
-                    <LoginPrompt>
-                        Already have an account?{' '}
-                        <LoginLink onClick={onLoginClick}>Log In</LoginLink>
-                    </LoginPrompt>
                 </StyledForm>
             )}
         </Formik>

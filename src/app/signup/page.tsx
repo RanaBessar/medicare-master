@@ -29,7 +29,8 @@ const FormSection = styled('div')({
     position: 'relative',
     zIndex: 2,
     '@media (max-width: 1200px)': {
-        width: '55%',
+        width: '100%',
+        justifyContent:'center'
     },
     '@media (max-width: 900px)': {
         width: '100%',
@@ -46,7 +47,7 @@ const WelcomeSection = styled('div')({
     position: 'relative',
     zIndex: 2,
     '@media (max-width: 1200px)': {
-        width: '45%',
+        display:'none',
     },
     '@media (max-width: 900px)': {
         display: 'none',
@@ -64,19 +65,7 @@ const WhiteCircle = styled(motion.div)({
     borderRadius: '50%',
     boxShadow: '0px 222px 89px rgba(0, 0, 0, 0.01), 0px 125px 75px rgba(0, 0, 0, 0.05), 0px 55px 55px rgba(0, 0, 0, 0.09), 0px 14px 30px rgba(0, 0, 0, 0.1)',
     zIndex: 1,
-    '@media (max-width: 1400px)': {
-        width: '900px',
-        height: '900px',
-        right: '-250px',
-        top: '-120px',
-    },
     '@media (max-width: 1200px)': {
-        width: '800px',
-        height: '800px',
-        right: '-200px',
-        top: '-100px',
-    },
-    '@media (max-width: 900px)': {
         display: 'none',
     },
 });
@@ -86,7 +75,18 @@ const LogoContainer = styled('div')({
     top: '31px',
     left: '56px',
     zIndex: 10,
+    '@media (max-width: 1200px)': {
+        marginTop:'-5px',
+      marginLeft:'-35px'
+          
+      },
+    '@media (max-width: 900px)': {
+      marginTop:'-5px',
+    marginLeft:'-35px'
+        
+    },
 });
+
 
 const FormContainer = styled('div')({
     width: '100%',
@@ -122,9 +122,9 @@ const SignUpTitle = styled(Typography)({
         marginTop: '40px',
     },
     '@media (max-width: 900px)': {
-        fontSize: '28px',
-        lineHeight: '42px',
-        marginTop: '30px',
+        fontSize: '20px',
+        lineHeight: '30px',
+        marginTop: '70px',
     },
 });
 
@@ -143,7 +143,7 @@ const SignUpSubtitle = styled(Typography)({
     '@media (max-width: 900px)': {
         fontSize: '14px',
         lineHeight: '16px',
-        marginBottom: '20px',
+        marginBottom: '10px',
     },
 });
 
@@ -160,6 +160,7 @@ const HeartIconContainer = styled(motion.div)({
     '@media (max-width: 1200px)': {
         width: '130px',
         height: '130px',
+        
     },
 });
 
@@ -250,10 +251,8 @@ const SignUpPage = () => {
     const { setDirection } = useAnimation();
 
     const handleLoginClick = () => {
-        setDirection('right'); // Set animation direction
-        setTimeout(() => {
-            router.push('/login');
-        }, 100); // Small delay to ensure animation starts before navigation
+        setDirection('right');
+        router.push('/login');
     };
 
     // Animation variants for the white circle
@@ -384,7 +383,6 @@ const SignUpPage = () => {
                         To keep connected with us please <br /> login with your personal info
                     </WelcomeText>
                     <LoginButton
-                        onClick={handleLoginClick}
                         disableRipple
                         initial="initial"
                         animate="animate"
@@ -393,6 +391,7 @@ const SignUpPage = () => {
                     >
                         Log In
                     </LoginButton>
+          
                 </WelcomeSection>
             </PageContainer>
         </PageTransition>
